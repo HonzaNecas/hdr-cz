@@ -40,7 +40,7 @@ InstanceOf: CZ_BundleHdr
 * entry[14].fullUrl = "urn:uuid:f0b20060-c4a8-4a74-b12a-499ae3b59015"
 * entry[14].resource = Device-Pacemaker
 * entry[15].fullUrl = "urn:uuid:6bec5d97-a17e-4015-8fce-e0c8439d8501"
-* entry[15].resource = HospitalEncounter
+* entry[15].resource = CZ-Encounter-HDR-Example
 * entry[16].fullUrl = "urn:uuid:5c2ddf62-9785-493f-80c6-52328bc8c061"
 * entry[16].resource = LevothyroxineMedication
 * entry[17].fullUrl = "urn:uuid:7cf304de-5ae3-4621-8531-03ce4adc16bd"
@@ -65,4 +65,26 @@ InstanceOf: CZ_BundleHdr
 * entry[26].resource = DischargeDocumenPDF
 * entry[27].fullUrl = "urn:uuid:e15aeeaf-e288-404c-9704-c20d9d8581bf"
 * entry[27].resource = DischargeDocumentHTML
+* entry[28].fullUrl = "urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620"
+* entry[28].resource = CZ-CarePlan-HDR-Example
+* entry[29].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-1c4566ea409f"
+* entry[29].resource = bloodcount-panel
+* entry[30].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-1c4566ea4091"
+* entry[30].resource = hb-result
+* entry[31].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-1c4566ea4092"
+* entry[31].resource = hct-result
+* entry[32].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-1c4566ea4093"
+* entry[32].resource = rbc-result
+* entry[33].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-1c4566ea4094"
+* entry[33].resource = wbc-result
+* entry[34].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-1c4566ea4095"
+* entry[34].resource = plt-result
+* entry[35].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-1c4566ea4096"
+* entry[35].resource = Location-2
+* entry[36].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-1c4566ea4097"
+* entry[36].resource = Location-3
+* entry[37].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-1c4566ea4098"
+* entry[37].resource = Location-4
+* entry[38].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-1c4566ea4099"
+* entry[38].resource = Location-5
 
