@@ -64,8 +64,27 @@ InstanceOf: CZ_CompositionHdr
 * section[3].text.status = #generated
 * section[3].entry[0] = Reference(ColonoscopyProcedure)
 
-* section[4].title = "P\u0159\u00edlohy"
-* section[4].entry[0] = Reference(DischargeDocumenPDF)
-* section[4].entry[1] = Reference(DischargeDocumentHTML)
-* section[4].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
+//Add section for laboratory results
+* section[4].title = "Laboratorn\u00ed v\u00fdsledky"
+* section[4].code.coding[0].system = "http://loinc.org"
+* section[4].code.coding[0].code = #24331-1 // Corrected code assignment
+* section[4].code.coding[0].display = "Laboratory results"
+* section[4].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Laboratory results at discharge</div>" // Added required text for cardinality
 * section[4].text.status = #generated
+* section[4].entry[0] = Reference(bloodcount-panel) // Corrected Reference to include the resource type
+
+
+//Add section for careplan
+* section[5].title = "Pl\u00e1n o\u010dkov\u00e1n\u00ed"
+* section[5].code.coding[0].system = "http://loinc.org"
+* section[5].code.coding[0].code = #72325-0 // Corrected code assignment
+* section[5].code.coding[0].display = "Care plan"
+* section[5].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Care plan at discharge</div>" // Added required text for cardinality
+* section[5].text.status = #generated
+* section[5].entry[0] = Reference(CZ-CarePlan-HDR-Example)
+
+* section[6].title = "P\u0159\u00edlohy"
+* section[6].entry[0] = Reference(DischargeDocumenPDF)
+* section[6].entry[1] = Reference(DischargeDocumentHTML)
+* section[6].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
+* section[6].text.status = #generated
