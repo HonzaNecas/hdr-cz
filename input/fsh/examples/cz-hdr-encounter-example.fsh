@@ -31,10 +31,10 @@ Description: "Czech HDR - example of an inpatient encounter"
 * reasonCode[0].coding[0].display = "Heart failure"
 
 // Legal status of the encounter
-* extension[0].url = "http://example.org/fhir/StructureDefinition/legalStatus"
+* extension[0].url = "http://hl7.org/fhir/StructureDefinition/legal-reason-extension"
 * extension[0].valueCodeableConcept.coding[0].system = $sct
-* extension[0].valueCodeableConcept.coding[0].code = #legal
-* extension[0].valueCodeableConcept.coding[0].display = "Legal"
+* extension[0].valueCodeableConcept.coding[0].code = #135848002
+* extension[0].valueCodeableConcept.coding[0].display = "Voluntary admission"
 
 // Hospitalization details
 * hospitalization.admitSource.coding[0].system = $admit-source
@@ -71,19 +71,3 @@ Description: "Czech HDR - example of an inpatient encounter"
 * diagnosis[0].use.coding[0].system = $diagnosis-role
 * diagnosis[0].use.coding[0].code = #AD
 * diagnosis[0].use.coding[0].display = "Admission diagnosis"
-
-
-
-// 7. Encounter: Inpatient hospitalization
-Instance: HospitalEncounter
-InstanceOf: CZ_EncounterHdr
-* meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-encounter-hdr"
-//* id = "hospital-encounter"
-* status = #finished
-* class.code = #IMP // Corrected code assignment
-* class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-* class.display = "inpatient"
-* subject = Reference(Mracena2)
-* period.start = "2025-03-01T10:15:00+01:00"
-* period.end = "2025-03-10T09:30:00+01:00"
-* serviceProvider = Reference(RegisteringProviderExample)

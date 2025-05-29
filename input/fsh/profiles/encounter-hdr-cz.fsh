@@ -36,7 +36,10 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 * reasonCode from ConditionHdrVS (preferred)
   * ^short = "Coded reason the encounter takes place"
 * reasonReference only Reference ( Observation or Condition or Procedure)
-
+* legalReason only LegalAdmitionReasonHdrVS
+  * ^short = "The reason why the encounter is occurring"
+  * ^definition = "The reason why the encounter is occurring, e.g. for a procedure or diagnostic investigation."
+  * ^comment = "This should be used only in case of legal reasons (e.g. court order)."
 
 * participant
   * individual 0..1
