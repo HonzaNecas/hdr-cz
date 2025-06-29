@@ -9,12 +9,13 @@ name: HL7CzHospitalDischargeIg
 title: HL7 Czech Hospital Discharge Report Implementation Guide
 description: This guide contains implementation specification for the HL7 Czech Hospital Discharge Report
 status: draft # draft | active | retired | unknown
+
 version: 0.0.2
 language: cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
-# license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # jurisdiction: urn:iso:std:iso:3166#CZ "Czechia" # https://www.hl7.org/fhir/valueset-jurisdiction.html
@@ -216,8 +217,6 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 #  generate-turtle:
 #  html-template:
 #  active-tables: false
-  pin-canonicals: pin-multiples
-# path-expansion-params: '../../expansion-params.json'
   apply-contact: true
   apply-jurisdiction: true
   apply-publisher: true
@@ -309,6 +308,7 @@ menu:
     Copyright (cs): copyright-cs.html
   Artifacts: artifacts.html
   IG HDR EU: https://build.fhir.org/ig/hl7-eu/hdr/index.html
+
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
