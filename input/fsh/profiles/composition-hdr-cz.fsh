@@ -17,13 +17,13 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * extension[basedOn].valueReference only Reference ( Resource or ServiceRequest ) /// add profile
 
 * extension contains $artifact-relatedArtifact named relatedArtifact 0..*
-* extension[relatedArtifact] 
+* extension[relatedArtifact]
   * ^short = "Related artefacts: e.g. presented form"
-* extension[relatedArtifact].valueRelatedArtifact.type 
+* extension[relatedArtifact].valueRelatedArtifact.type
   * ^example[0].label = "presented form"
   * ^example[0].valueCodeableConcept  = http://hl7.org/fhir/related-artifact-type#documentation
   // ItT seems not appropriate as code... to be changed if this solution is used
-* extension[relatedArtifact].valueRelatedArtifact.document  
+* extension[relatedArtifact].valueRelatedArtifact.document
 
 * extension contains $composition.version-r5 named compositionVersionR5 0..
 * extension[compositionVersionR5].valueString ^short = "Business version"
@@ -138,7 +138,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * insert SectionComRules (
     Vital signs,
     The Vital signs section includes blood pressure\, body temperature\, heart rate\, and respiratory rate. It may also include other clinical findings\, such as height\, weight\, body mass index\, head circumference\, and pulse oximetry. In particular\, notable vital signs or physical findings such as the most recent\, maximum and/or minimum\, baseline\, or relevant trends may be included,
-    $loinc#8716-3) //  "Vital signs"  
+    $loinc#8716-3) //  "Vital signs"
   * entry 1..
   * entry only Reference(Observation or DocumentReference or $vitalsigns)
 
@@ -164,7 +164,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
       Allergies and Intolerances Section,
       This section documents the relevant allergies or intolerances (conditions\) for that patient\, describing the kind of reaction (e.g. rash\, anaphylaxis\,..\); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum\, it should list currently active and any relevant historical allergies and adverse reactions.\r\nIf no information about allergies is available\, or if no allergies are known this should be clearly documented in the section.,
       $loinc#48765-2 )   // CODE
-  * entry 1.. 
+  * entry 1..
   * entry only Reference(CZ_AllergyIntoleranceHdr or DocumentReference or AllergyIntolerance)
   * insert SectionEntrySliceComRules(Relevant allergies or intolerances (conditions\) for that patient.,
     It lists the relevant allergies or intolerances (conditions\) for that patient\, describing the kind of reaction (e.g. rash\, anaphylaxis\,..\); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum\, it should list currently active and any relevant historical allergies and adverse reactions.\r\n This entry shall be used to document that no information about allergies is available\, or that no allergies are known .)
@@ -190,10 +190,10 @@ Description: "This profile defines how to represent Composition resource in HL7 
     $loinc#8648-8 )   // "Hospital course Narrative"
   * ^short = "Significant information about course of hospital stay"
   * ^definition = "This section includes basic information about hospital staty (encounter), diagnostic summary in narrative form, pharmacotherapy, major procedures, medical devices, significant findings during hospital stay and clinical synthesis."
-  
+
   // * insert SectionSliceComRules (Hospital Course sub sections,Hospital Course sub sections)
 
-  /* * entry 1..1 
+  /* * entry 1..1
    * entry only Reference(Encounter) // EncounterEuHdr */
 
 * section contains sectionDiagnosticSummary 0..1
@@ -257,8 +257,8 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
   * insert SectionEntrySliceDefRules (labResult, 0.. , Laboratory Result , Laboratory Result, $Observation-resultslab-eu-lab)
   * insert SectionEntrySliceDefRules (radResult, 0.. , Radiology Result ,
     Radiology Result  ,$Observation-results-radiology-uv-ips)
-    
-    
+
+
   // * entry only Reference(Observation or $Observation-resultslab-eu-lab or ) //  or ObservationResultsRadiologyUvIps or ObservationResultsLaboratoryEu)
 
 
@@ -267,8 +267,8 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
   * insert SectionComRules (
     Synthesis,
     This section provides clinical synthesis (e.g. description of reasons and course of hospital stay\) clustered by managed conditions. Clinical synthesis may include clinical reasoning (differential diagnostics\, explanation of clinical context\) in clinically complex conditions.,
-    $loinc#51848-0 ) // Evaluation note 
- 
+    $loinc#51848-0 ) // Evaluation note
+
 
 /*  TO BE REVIEWED
 
@@ -299,7 +299,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
       Discharge details,
       The hospital discharge status or disposition of the patient having a hospitalization.,
       $loinc#8650-4 ) //"Hospital discharge disposition Narrative"
- 
+
  // * insert EvaluationSubSectionRules
 
 // -------------------------------------
@@ -497,7 +497,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
 * section[sectionSocialHistory]
   * insert SectionComRules (
     Social History Section,
-    The social history section contains a description of the person Health related lifestyle factors or lifestyle observations.   E.g. smoke habits; alcohol consumption; diets\, risky habits., 
+    The social history section contains a description of the person Health related lifestyle factors or lifestyle observations.   E.g. smoke habits; alcohol consumption; diets\, risky habits.,
     $loinc#29762-2  )   // CODE
 
 // \’s Health related lifestyle factors or lifestyle observations.   E.g. smoke habits; alcohol consumption; diets\, risky habits.,
@@ -505,7 +505,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
   * entry 0..
   * entry only Reference(Observation or DocumentReference)    // or $Observation-alcoholuse-uv-ips or $Observation-tobaccouse-uv-ips)
 
-/* 
+/*
 * section[sectionSocialHistory] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionSocialHistory] ^extension[0].valueString = "Section"
 * section[sectionSocialHistory] ^short = "Social History Section"
@@ -627,7 +627,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
 
   * insert SectionComRules (
     Hospital discharge medications,
-    Hospital discharge medications defines the medications that the patient is intended to take\, or stop\, after discharge, 
+    Hospital discharge medications defines the medications that the patient is intended to take\, or stop\, after discharge,
     $loinc#75311-1 )   //  Discharge medications Narrative OR 10183-2 "Hospital discharge medications Narrative" or 	Discharge medications Narrative
   * entry 1..
   * entry only Reference(CZ_MedicationRequestHdr or MedicationDispense)
@@ -642,7 +642,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
     Hospital Discharge instructions,
     Hospital Discharge instructions,
     $loinc#8653-8 )   //  Hospital Discharge instructions
-  
+
 
 // -------------------------------------
 // Hospital Discharge Studies Summary Section
@@ -677,8 +677,8 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
 
 * section contains sectionTravelHx ..1
 * section[sectionTravelHx]
-  * insert SectionComRules ( 
-        Travel History Section, 
+  * insert SectionComRules (
+        Travel History Section,
         This Section describes the travel history relevant for the Patient Summary\, e.g.recent travel in a region of high prevalence of a specific infectious disease like Malaria,
         $loinc#10182-4 )
 
@@ -709,7 +709,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
   * insert SectionComRules (
       Library of attachments.,
       List documents related and attachments to this report.,
-      $loinc#77599-9 ) // "Additional documentation" 
+      $loinc#77599-9 ) // "Additional documentation"
   * ^short = "Attachments"
   * ^definition = "This section lists documents and attachments associated to this report"
   * entry only Reference(DocumentReference or Binary) // Add Bundle ?
@@ -722,7 +722,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
   * insert SectionComRules (
       Encounters sections,
       This section lists and describes any healthcare encounters pertinent to the patient’s current health status or historical health history.  ,
-      $loinc#46240-8 )  
+      $loinc#46240-8 )
   * ^short = "Encounters sections"
   * ^definition = "This section lists documents and attachments associated to this report"
 
@@ -744,7 +744,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
 
 /* * section contains sectionTravelHx ..1
 * section[sectionTravelHx]
-  * insert SectionComRules ( Travel History Section, 
+  * insert SectionComRules ( Travel History Section,
         This Section describes the travel history relevant for the Patient Summary\, e.g.recent travel in a region of high prevalence of a specific infectious disease like Malaria,
         $loinc#10182-4 ) */
 
