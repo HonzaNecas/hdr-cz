@@ -1,6 +1,6 @@
 PlantUML
 
-@startmindmap
+@startmindmap map
 skinparam topurl StructureDefinition-
 <style>
 mindmapDiagram {

@@ -9,6 +9,11 @@ This guide does not describe how to exchange this message.
 
 ### Information Models
 
+<div>
+  <img src="hdr_schema_en.png" class="figure-img img-responsive img-rounded center-block" width="70%">
+  <p><strong>Fig. 1: Hospital discharge report structure</strong></p>
+</div>
+
 Basic Sections of the Hospital Discharge Report
 
 | Section |	Cardinality	| Obligation | Link |
@@ -21,34 +26,12 @@ Basic Sections of the Hospital Discharge Report
 | A.2.4 Reason for Admission | 0..1 | Required | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
 | A.2.5 Condition at Admission (Initial Examination) | 0..1 | Optional | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
 | A.2.6 Medical History | 0..1 | Optional | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
-| A.2.7 Course of Hospitalization| 1..1| Mandatory| [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
-| A.2.8 Condition at Discharge|	1..1| Mandatory | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
-| A.2.9 Recommendations| 0..1 | Required | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
+| A.2.7 Course of Hospitalization | 1..1| Mandatory| [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
+| A.2.8 Condition at Discharge |	1..1| Mandatory | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
+| A.2.9 Recommendations | 0..1 | Required | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
+| A.3 Presentation form | 1..1 | Mandatory | [Link] |
+| A.4 Attachments | 0..1 | Optional | [Link] |
 
-#### Conceptual view
-
-Hospital discharge report could be divided into several parts: document header, body and optionally it could also have various attachments.
-
-##### Hospital Discharge Report
-<div>
-<img src="out/input/images/hdrReport_CIM.svg" class="figure-img img-responsive img-rounded center-block" width="70%">
-<p><strong>Fig. 1: TODO Popsat</strong></p>
-<p> </p>
-</div>
-##### Hospital Discharge Report header
-<div>
-<img src="out/input/images/hdrReportHdr_CIM.svg" class="figure-img img-responsive img-rounded center-block" width="70%">
-<p><strong>Fig. 1: TODO Popsat</strong></p>
-<p> </p>
-</div>
-##### Hospital Discharge Report body
-<div>
-<img src="out/input/images/hdrReportBody_CIM.svg" class="figure-img img-responsive img-rounded center-block" width="70%">
-<p><strong>Fig. 1: TODO Popsat</strong></p>
-<p> </p>
-</div>
-
-![obrázek 1](out/input/images/hdrReport_CIM.svg)
 
 ### Scope
 This document presents Czech use concepts defined via FHIR processable artefacts; these are collaborative outputs with agreed approaches to varied kinds of healthcare related information based on the core FHIR R4 specification.
@@ -70,4 +53,6 @@ This guide is divided into several pages which are listed at the top of each pag
 ### IP statements
 
 {% include ip-statements.xhtml %}
+
+
 
