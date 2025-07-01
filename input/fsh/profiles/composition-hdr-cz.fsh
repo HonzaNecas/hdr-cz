@@ -235,7 +235,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
     Pharmacotherapy,
     Selected drug treatment during hospitalisation. Medicinal products that were administered during hospitalisation and whose administration has already been discontinued before discharge. Only products which are important for continuity of care (antibiotics other than completely routine\, corticosteroids in high doses\, etc.\) will be listed. Products which administration will continue after discharge will be also recorder in the Medication summary section.
 Medicinal products\, the administration of which was started during hospitalisation but is also recommended after discharge\, will be listed in the summary table in the recommendation section. ,
-$loinc#10160-0 ) // 	History of Medication use Narrative
+$loinc#10160-0) // 	History of Medication use Narrative
     // $sct#1003606003 ) // "Medication history section (record artifact\)"
   * entry 1..
   * entry only Reference(MedicationStatement or MedicationRequestEuHdr or MedicationDispense or MedicationAdministration)
@@ -267,7 +267,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
   * insert SectionComRules (
     Synthesis,
     This section provides clinical synthesis (e.g. description of reasons and course of hospital stay\) clustered by managed conditions. Clinical synthesis may include clinical reasoning (differential diagnostics\, explanation of clinical context\) in clinically complex conditions.,
-    $loinc#67781-5) // Evaluation note
+    $loinc#67781-5) // Summarization of encounter note Narrative
 
 
 /*  TO BE REVIEWED
@@ -392,7 +392,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
   * insert SectionComRules (
     History of Procedures Section,
       The History of Procedures Section contains a description of the patient past procedures that are pertinent to the scope of this document.\r\nProcedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy
-      ,$loinc#47519-4 "History of Procedures Document")   // CODE
+      ,$loinc#47519-4)   // CODE  "History of Procedures Document"
   * entry 1..
   * entry only Reference(Procedure
                           or DocumentReference  )
@@ -413,7 +413,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
   * insert SectionComRules (
     Immunizations Section,
       The Immunizations Section defines a patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nThe section includes current immunization status\, and may contain the entire immunization history that is relevant to the period of time being summarized.
-      , $loinc#11369-6 "History of Immunization Narrative")   // CODE
+      , $loinc#11369-6 )   // CODE "History of Immunization Narrative"
   * entry 1..
   * entry only Reference(CZ_ImmunizationHdr  or ImmunizationRecommendationEuHdr
                           or DocumentReference  )
