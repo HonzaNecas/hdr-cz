@@ -267,7 +267,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
   * insert SectionComRules (
     Synthesis,
     This section provides clinical synthesis (e.g. description of reasons and course of hospital stay\) clustered by managed conditions. Clinical synthesis may include clinical reasoning (differential diagnostics\, explanation of clinical context\) in clinically complex conditions.,
-    $loinc#51848-0 ) // Evaluation note 
+    $loinc#67781-5) // Evaluation note 
  
 
 /*  TO BE REVIEWED
