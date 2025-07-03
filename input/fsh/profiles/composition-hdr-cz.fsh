@@ -66,11 +66,15 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * attester.party ^short = "Who attested the composition."
 * attester.party only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 
+
+
 * section 1..
   // add invariant or text or section
 
 * insert SectionSliceComRules (Sections composing the Hospital Discharge Report,
         The root of the sections that make up the Hospital Discharge Report composition.)
+
+* section.author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 
 // -------------------------------------
 // Admission Evaluation Section 0 … 1 R
