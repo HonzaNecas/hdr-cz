@@ -127,6 +127,9 @@ InstanceOf: CZ_CompositionHdr
 
 Instance: DischargeComposition-Novak-Petr
 InstanceOf: CZ_CompositionHdr
+Title: "Propouštěcí zpráva - Novák Petr"
+Description: "Example of Hospital Discharge report (Bundle)"
+Usage: #example
 //* id = "discharge-composition"
 * status = #final
 * type.coding[0].system = $loinc
@@ -225,10 +228,6 @@ InstanceOf: CZ_CompositionHdr
 * section[sectionSignificantResults].text.status = #generated
 * section[sectionSignificantResults].entry[0] = Reference(Observation-UZV-Novak) // Corrected Reference to include the resource type
 * section[sectionSignificantResults].entry[1] = Reference(Observation-CRP-Novak) // Corrected Reference to include the resource type
-/*
-* section[sectionSignificantResults].entry[radResults] = Reference(Observation-UZV-Novak)
-* section[sectionSignificantResults].entry[labResults] = Reference(Observation-CRP-Novak)
-*/
 
 /* // Sekce Historie Implantátů
 * section[sectionMedicalDevices].title = "Zdravotní pomůcky a implantáty"
