@@ -299,7 +299,7 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 * contained[+] = Organization-1 
 */
 // Patient details identification
-* id = "Novak-Petr"
+* id = "3f85726c-ad2f-441b-89ce-100000000000"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core"
 * identifier[+]
   * system = $cz-patient-rcis
