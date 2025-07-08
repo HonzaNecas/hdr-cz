@@ -10,7 +10,7 @@ This includes both jurisdictional and cross-border scenarios.
 ### Information Models
 
 <div>
-  <img src="HDR_schema_cz.png" class="figure-img img-responsive img-rounded center-block" width="70%">
+  <img src="HDR_schema_EN.png" class="figure-img img-responsive img-rounded center-block" width="70%">
   <p><strong>Fig. 1: Hospital discharge report structure</strong></p>
 </div>
 

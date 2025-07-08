@@ -2,6 +2,8 @@ Logical: HospitalDischargeReportEhnCz
 Id: HospitalDischargeReportCz
 Title: "A - Hospital Discharge Report (eHN)"
 Description: """Hospital Discharge Report"""
+
+* insert SetFmmandStatusRule ( 1, draft )
 * header 1..1 HeaderHdrEhn "A.1 - Hospital Discharge Report header data element" """Hospital Discharge Report header data element"""
 * body 1..1 BackboneElement "A.2 - Hospital Discharge Report body data element" """Hospital Discharge Report body data element"""
 * body.presentedForm 0..1 BackboneElement "A.2.0 - Hospital Discharge Report in its narrative form" """Hospital Discharge Report in its narrative form"""
@@ -20,3 +22,7 @@ For details see: https://paciowg.github.io/functional-status-ig/"""
 * body.recommendations.carePlan 0..* PlanOfCare "A.2.8.1 - Care plan" """Care plan after discharge. Multiple care plans could be provided."""
 * body.recommendations.medicationSummary 0..* MedicationSummary "A.2.8.2 - Medication summary" """Summary information on the medication recommended for the period after discharge, indicating whether the medication is changed or newly started. Compared to previous practices, the overview is supplemented with medication that has been discontinued."""
 * body.recommendations.otherRecommendations 0..* string "A.2.8.3 - Other recommendations" """Other recommendations (advice) after discharge. Multiple recommendations could be provided. E.g., recommendation to suggest hip replacement, reduce number of cigarettes, stop smoking, increase physical exercises, etc."""
+
+
+* presentedForm 1..* PresentedFormCz "B - Presented Form" """Entire order as issued. Various formats could be provided,  pdf format is recommended."""
+* media 0..* AttachmentsCz "C - Media Attachment" """Aditional media attachment"""
