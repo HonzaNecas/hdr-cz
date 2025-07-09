@@ -19,7 +19,7 @@ Description: "Example of Social History Observation - Smoking"
 * status = #final
 * category[SocialHistory] =  $observation-category#social-history
 * code = $sct#229819007 "Smoking"
-* subject = Reference(Mracena2)
+* subject = Reference(Patient-Novak-Petr)
 * effectivePeriod.start = "2017-04-15T00:00:00+02:00"
 * effectivePeriod.end = "2020-04-15T00:00:00+02:00"
 * performer = Reference(Practitioner-2)
@@ -34,7 +34,7 @@ Description: "Example of Social History Observation - Alcohol Use"
 * status = #final
 * category[SocialHistory] =  $observation-category#social-history
 * code = $sct#160573003 "ETOH (Alcohol) Use"
-* subject = Reference(Mracena2)
+* subject = Reference(Patient-Novak-Petr)
 * effectivePeriod.start = "2016-04-15T00:00:00+02:00"
 * effectivePeriod.end = "2016-04-15T00:00:00+02:00"
 * performer = Reference(Practitioner-2)

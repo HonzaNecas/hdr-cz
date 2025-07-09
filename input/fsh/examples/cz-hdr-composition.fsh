@@ -226,13 +226,41 @@ InstanceOf: CZ_CompositionHdr
 * section[sectionSignificantResults].entry[0] = Reference(Observation-UZV-Novak) // Corrected Reference to include the resource type
 * section[sectionSignificantResults].entry[1] = Reference(Observation-CRP-Novak) // Corrected Reference to include the resource type
 
-/* // Sekce Historie Implantátů
+//Add section for social history
+* section[sectionSocialHistory].title = "Anamnéza"
+* section[sectionSocialHistory].code.coding[0].system = "http://loinc.org"
+* section[sectionSocialHistory].code.coding[0].code = #29762-2 // Corrected code assignment
+* section[sectionSocialHistory].code.coding[0].display = "Social history"
+* section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Social history at discharge</div>" // Added required text for cardinality
+* section[sectionSocialHistory].text.status = #generated
+* section[sectionSocialHistory].entry[0] = Reference(ExampleSdohSmoking)
+* section[sectionSocialHistory].entry[1] = Reference(ExampleSdohAlcohol)
+
+//Add section for imunizations
+* section[sectionImmunizations].title = "Očkování"
+* section[sectionImmunizations].code.coding[0].system = "http://loinc.org"
+* section[sectionImmunizations].code.coding[0].code = #11369-6 // Corrected code assignment
+* section[sectionImmunizations].code.coding[0].display = "Immunizations"
+* section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Immunizations at discharge</div>" // Added required text for cardinality
+* section[sectionImmunizations].text.status = #generated
+* section[sectionImmunizations].entry[0] = Reference(Immunization)
+
+* section[sectionHospitalCourse].title = "Klinické shrnutí"
+* section[sectionHospitalCourse].code = $loinc#8648-8 "Průběh hospitalizace"
+* section[sectionHospitalCourse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml">
+  Pacient byl přijat ...
+  </div>""" // TODO: Needs update !!!
+* section[sectionHospitalCourse].text.status = #generated
+
+/*
+// Sekce Historie Implantátů
 * section[sectionMedicalDevices].title = "Zdravotní pomůcky a implantáty"
 * section[sectionMedicalDevices].code.coding[0].system = $loinc
 * section[sectionMedicalDevices].code.coding[0].code = #46264-8 // Historie implantátů
 * section[sectionMedicalDevices].code.coding[0].display = "Medical devices and implants"
 * section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient nemá žádné zdravotní pomůcky ani implantáty.</div>" // Added required text for cardinality
 * section[sectionMedicalDevices].text.status = #generated
+* section[sectionMedicalDevices].entry[0] = Reference(MedicalDevice-Example) // Example reference to a medical device
 */
 
 //sekce Doporučení - Plán péče
@@ -261,24 +289,6 @@ InstanceOf: CZ_CompositionHdr
 * section[sectionEncounters].entry[0] = Reference(HospitalEncounter-Novak-Petr)
 * section[sectionEncounters].entry[1] = Reference(Condition-K409)
 
-//Add section for imunizations
-* section[7].title = "Očkování"
-* section[7].code.coding[0].system = "http://loinc.org"
-* section[7].code.coding[0].code = #11369-6 // Corrected code assignment
-* section[7].code.coding[0].display = "Immunizations"
-* section[7].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Immunizations at discharge</div>" // Added required text for cardinality
-* section[7].text.status = #generated
-* section[7].entry[0] = Reference(Immunization)
-
-//Add section for social history
-* section[8].title = "Anamnéza"
-* section[8].code.coding[0].system = "http://loinc.org"
-* section[8].code.coding[0].code = #72270-4 // Corrected code assignment
-* section[8].code.coding[0].display = "Social history"
-* section[8].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Social history at discharge</div>" // Added required text for cardinality
-* section[8].text.status = #generated
-* section[8].entry[0] = Reference(ExampleSdohSmoking)
-* section[8].entry[1] = Reference(ExampleSdohAlcohol)
 
 // Add section for attachments
 * section[9].title = "P\u0159\u00edlohy"
