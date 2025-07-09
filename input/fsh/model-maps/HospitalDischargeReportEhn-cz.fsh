@@ -5,7 +5,7 @@ Description: """Hospital Discharge Report"""
 
 * insert SetFmmandStatusRule ( 1, draft )
 * header 1..1 HeaderHdrEhn "A.1 - Hospital Discharge Report header data element" """Hospital Discharge Report header data element"""
-* body 1..1 BackboneElement "A.2 - Hospital Discharge Report body data element" """Hospital Discharge Report body data element"""
+* body 0..1 BackboneElement "A.2 - Hospital Discharge Report body data element" """Hospital Discharge Report body data element"""
 * body.presentedForm 0..1 BackboneElement "A.2.0 - Hospital Discharge Report in its narrative form" """Hospital Discharge Report in its narrative form"""
 * body.advanceDirectives 0..1 AdvanceDirectivesEhn "A.2.1 - Advance directives" """Advance directives"""
 * body.alerts 0..1 AlertsEhn "A.2.2 - Alerts" """Alerts"""
