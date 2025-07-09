@@ -43,3 +43,4 @@ Description: """Hospital Discharge Report - Hospital Discharge Report header dat
 * documentMetadata.confidentiality 1..1 CodeableConcept "A.1.8.7 - Confidentiality" """Level of confidentiality of the document. Implicit value is normal."""
 * documentMetadata.language 1..1 CodeableConcept "A.1.8.8 - Language" """Language in which the document is written. Language is expressed by the ISO language code."""
 * documentMetadata.version 0..1 string "A.1.8.9 - Version" """Version of the document"""
+* digitalSignature 1..* DigitalSignatureCz "A.1.9 - Digital signature" """Digital signature"""

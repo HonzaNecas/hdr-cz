@@ -127,7 +127,7 @@ InstanceOf: CZ_CompositionHdr
 
 Instance: DischargeComposition-Novak-Petr
 InstanceOf: CZ_CompositionHdr
-//* id = "discharge-composition"
+* id = "cdae7735-f7ee-4bc7-9cf3-3dc806a4eaaf"
 * status = #final
 * type.coding[0].system = $loinc
 * type.coding[0].code = #34105-7
@@ -225,10 +225,6 @@ InstanceOf: CZ_CompositionHdr
 * section[sectionSignificantResults].text.status = #generated
 * section[sectionSignificantResults].entry[0] = Reference(Observation-UZV-Novak) // Corrected Reference to include the resource type
 * section[sectionSignificantResults].entry[1] = Reference(Observation-CRP-Novak) // Corrected Reference to include the resource type
-/*
-* section[sectionSignificantResults].entry[radResults] = Reference(Observation-UZV-Novak)
-* section[sectionSignificantResults].entry[labResults] = Reference(Observation-CRP-Novak)
-*/
 
 /* // Sekce Historie Implantátů
 * section[sectionMedicalDevices].title = "Zdravotní pomůcky a implantáty"

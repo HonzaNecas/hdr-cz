@@ -102,14 +102,15 @@ InstanceOf: CZ_BundleHdr
 // 2. Bundle: Hospital Discharge Report - Novák Petr
 Instance: DischargeBundle-Novak-Petr
 InstanceOf: CZ_BundleHdr
-
+Description: "Example Bundle for Hospital Discharge Report for patient Novák Petr"
+Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:c859d718-03c2-43ed-a16c-dbe57a6e34b5"    // unique Bundle ID
 * type = #document
 * timestamp = "2025-03-10T15:00:00+01:00"
 // Bundle Entries (ordered by profile slices):
 * entry[0].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eaaf"
-* entry[0].resource = DischargeComposition-Novak-Petr 
+* entry[0].resource = DischargeComposition-Novak-Petr
 * entry[0].resource.meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
 * entry[1].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000000"
 * entry[1].resource = Patient-Novak-Petr
