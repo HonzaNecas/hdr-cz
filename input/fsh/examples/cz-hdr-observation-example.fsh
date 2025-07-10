@@ -178,3 +178,19 @@ Description: "Example instance for blood pressure observation (systolic and dias
 * component[1].valueQuantity.unit = "mmHg"
 * component[1].valueQuantity.system = "http://unitsofmeasure.org"
 * component[1].valueQuantity.code = #mm[Hg]
+
+Instance: Observation-DischargeCondition
+InstanceOf: Observation
+Usage: #example
+Title: "Stav při propuštění"
+Description: "Hodnocení celkového klinického stavu pacienta při propuštění"
+
+* status = #final
+* category[0] = $observation-category#clinical "Clinical"
+* code = $loinc#8653-8 "Patient condition at discharge"
+* performer[0] = Reference(Practitioner-Author)
+* subject = Reference(Patient-Novak-Petr)
+* effectiveDateTime = "2024-03-29"
+* valueCodeableConcept = $sct#268910001 "Stav stabilizovaný"
+* interpretation = $v3-ObservationInterpretation#N "Normal"
+* note[0].text = "Pacient ve stabilizovaném stavu, bez komplikací."

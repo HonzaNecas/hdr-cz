@@ -282,6 +282,80 @@ InstanceOf: CZ_CompositionHdr
 * section[sectionMedicalDevices].entry[0] = Reference(DeviceUseStatement-Pacemaker) // Example reference to a medical device
 * section[sectionMedicalDevices].entry[1] = Reference(Procedure-Insert-Pacemaker2) // Example reference to another medical device
 
+// Sekce pro stav při propuštění sectionDischargeFindings
+* section[sectionDischargeFindings].title = "Objektivní nález při propuštění"
+* section[sectionDischargeFindings].code.coding[0].system = $loinc
+* section[sectionDischargeFindings].code.coding[0].code = #10184-0 // Discharge findings
+* section[sectionDischargeFindings].code.coding[0].display = "Discharge findings"
+* section[sectionDischargeFindings].text.div = """
+  <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>Objektivní nález při propuštění z nemocnice:</p>
+    <ul>
+      <li>Vědomí: plně orientovaný, spolupracující.</li>
+      <li>Vital signs: TK 120/80 mmHg, P 75/min, T 36.5 °C.</li>
+      <li>Hlava a krk: bez patologických nálezů, sliznice normálně prokrvené.</li>
+      <li>Plíce: čisté, bez šelestů, dýchání pravidelné.</li>
+      <li>Srdce: pravidelný rytmus, bez šelestů, frekvence 75/min.</li>
+      <li>Bricho: měkké, nebolestivé, bez patologických nálezů, jaterní hranice normální, slezina nepalpovatelná.</li>
+      <li>Končetiny: bez otoků, normální prokrvení a citlivost, pohyblivost zachována.</li>
+      <li>Rána po operaci: suchá, bez známek infekce, steh odstraněn, jizva dobře zhojená.</li>
+    </ul>
+    <p>Pacient je v dobrém stavu, bez známek komplikací po operaci. Byla doporučena klidová režimová opatření, kontrola v chirurgické ambulanci za 7 dní.</p>
+  </div>""" // Added required text for cardinality
+* section[sectionDischargeFindings].text.status = #generated
+* section[sectionDischargeFindings].author[0] = Reference(Practitioner-Author)  // Example reference to a physical exam observation
+* section[sectionDischargeFindings].entry[0] = Reference(ExampleChestCircumference)
+* section[sectionDischargeFindings].entry[1] = Reference(ExampleHeadCircumference)
+* section[sectionDischargeFindings].entry[2] = Reference(ExampleAbdominalCircumference)
+* section[sectionDischargeFindings].entry[3] = Reference(ExampleHeight)
+* section[sectionDischargeFindings].entry[4] = Reference(ExampleWeight) 
+* section[sectionDischargeFindings].entry[5] = Reference(ExampleBloodPressure)
+
+// Sekce pro discharge detail sectionFunctionalStatus
+* section[sectionFunctionalStatus].title = "Funkční stav při propuštění"
+* section[sectionFunctionalStatus].code.coding[0].system = $loinc
+* section[sectionFunctionalStatus].code.coding[0].code = #47420-5 // Discharge findings
+* section[sectionFunctionalStatus].code.coding[0].display = "Functional status at discharge"
+* section[sectionFunctionalStatus].text.div = """
+  <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>Funkční stav pacienta při propuštění z nemocnice:</p>
+    <ul>
+      <li>Schopnost samostatné chůze: ano, bez pomoci.</li>
+      <li>Schopnost samostatného pohybu: ano, bez omezení.</li>
+      <li>Schopnost vykonávat běžné denní aktivity: ano, bez omezení.</li>
+      <li>Schopnost samostatné péče o sebe: ano, bez pomoci.</li>
+      <li>Schopnost komunikace: ano, plně orientovaný, schopný verbální komunikace.</li>
+      <li>Schopnost orientace v čase a prostoru: ano, plně orientovaný, schopný se orientovat v čase a prostoru.</li>
+      <li>Schopnost vykonávat domácí práce: ano, bez omezení.</li>
+      <li>Schopnost vykonávat pracovní činnosti: ano, bez omezení.</li>
+      <li>Schopnost řídit motorové vozidlo: ano, bez omezení.</li>
+      <li>Schopnost vykonávat sportovní aktivity: ano, bez omezení.</li>
+    </ul>
+    <p>Pacient je v dobrém funkčním stavu, bez omezení v běžných denních aktivitách. Byla doporučena klidová režimová opatření, kontrola v chirurgické ambulanci za 7 dní.</p>
+  </div>""" // Added required text for cardinality
+* section[sectionFunctionalStatus].text.status = #generated
+* section[sectionFunctionalStatus].author[0] = Reference(Practitioner-Author)  // Example reference to a functional status observation
+* section[sectionFunctionalStatus].entry[0] = Reference(Observation-DischargeCondition)
+
+// Sekce pro poznámku k propuštění sectionDischargeDetails
+* section[sectionDischargeDetails].title = "Poznámka k propuštění"
+* section[sectionDischargeDetails].code.coding[0].system = $loinc
+* section[sectionDischargeDetails].code.coding[0].code = #8650-4 // Discharge details
+* section[sectionDischargeDetails].code.coding[0].display = "Discharge details"
+* section[sectionDischargeDetails].text.div = """
+  <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>Pacient byl propuštěn z nemocnice dne 10. 3. 2025 po úspěšné operaci pravostranné tříselné kýly. Při propuštění byl pacient v dobrém stavu, bez známek komplikací. Byla doporučena klidová režimová opatření, kontrola v chirurgické ambulanci za 7 dní. Pacient byl informován o nutnosti dodržování pooperačního režimu a o možných komplikacích, které by měly být hlášeny lékaři. Pacient byl propuštěn do domácího ošetření s doporučením k dalšímu sledování a péči.</p>
+    <p>Kontakty pro další informace:</p>
+    <ul>
+      <li>Chirurgická ambulance: +420 123 456 789</li>
+      <li>Praktický lékař: +420 987 654 321</li>
+      <li>Nemocnice: +420 111 222 333</li>
+    </ul>
+    <p>Pacient byl propuštěn s doporučením k dalšímu sledování a péči. V případě jakýchkoli potíží nebo nejasností je doporučeno kontaktovat lékaře nebo navštívit nejbližší pohotovost.</p>
+  </div>""" // Added required text for cardinality
+* section[sectionDischargeDetails].text.status = #generated
+* section[sectionDischargeDetails].author[0] = Reference(Practitioner-Author)
+
 //sekce Doporučení - Plán péče
 * section[sectionPlanOfCare].title = "Plán péče"
 * section[sectionPlanOfCare].code.coding[0].system = "http://loinc.org"
