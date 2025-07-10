@@ -208,6 +208,9 @@ InstanceOf: CZ_CompositionHdr
 * section[sectionMedications].entry[0] = Reference(MedicationStatement-Euthyrox-Novak)
 * section[sectionMedications].entry[1] = Reference(MedicationStatement-Paracetamol-Novak)
 * section[sectionMedications].entry[2] = Reference(MedicationStatement-Ibalgin400-Novak)
+* section[sectionMedications].entry[3] = Reference(MedicationDispense-Euthyrox)
+* section[sectionMedications].entry[4] = Reference(MedicationDispense-Paracetamol)
+* section[sectionMedications].entry[5] = Reference(MedicationDispense-Ibalgin400)
 
 ///sekce Výsledky vyšetření
 * section[sectionSignificantResults].title = "Výsledky vyšetření"
@@ -252,16 +255,16 @@ InstanceOf: CZ_CompositionHdr
   </div>""" // TODO: Needs update !!!
 * section[sectionHospitalCourse].text.status = #generated
 
-/*
-// Sekce Historie Implantátů
+
+// Sekce Implantáty a zdravotní pomůcky
 * section[sectionMedicalDevices].title = "Zdravotní pomůcky a implantáty"
 * section[sectionMedicalDevices].code.coding[0].system = $loinc
 * section[sectionMedicalDevices].code.coding[0].code = #46264-8 // Historie implantátů
 * section[sectionMedicalDevices].code.coding[0].display = "Medical devices and implants"
-* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient nemá žádné zdravotní pomůcky ani implantáty.</div>" // Added required text for cardinality
+* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacientovi byl implantován kardiostimulátor Medtronic model W1DR01.</p></div>" // Added required text for cardinality
 * section[sectionMedicalDevices].text.status = #generated
-* section[sectionMedicalDevices].entry[0] = Reference(MedicalDevice-Example) // Example reference to a medical device
-*/
+* section[sectionMedicalDevices].entry[0] = Reference(DeviceUseStatement-Pacemaker) // Example reference to a medical device
+* section[sectionMedicalDevices].entry[1] = Reference(Procedure-Insert-Pacemaker2) // Example reference to another medical device
 
 //sekce Doporučení - Plán péče
 * section[sectionPlanOfCare].title = "Plán péče"

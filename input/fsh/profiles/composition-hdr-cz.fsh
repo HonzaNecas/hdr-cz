@@ -232,7 +232,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
     // $sct#1184586001) //"Medical device document section (record artifact\)
   * entry 1..
  // * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuHdr ) // DeviceUseStatementEuHdr also ?
-  * entry only Reference(CZ_MedicalDevice or CZ_ProcedureHdr )
+  * entry only Reference(CZ_DeviceUseStatementHdr or CZ_ProcedureHdr )
   * section ..0
 
 * section contains sectionMedications 0..1
@@ -244,7 +244,7 @@ Medicinal products\, the administration of which was started during hospitalisat
 $loinc#10160-0) // 	History of Medication use Narrative
     // $sct#1003606003 ) // "Medication history section (record artifact\)"
   * entry 1..
-  * entry only Reference(CZ_MedicationStatement or CZ_MedicationRequestHdr or CZ_MedicationHdr)  //or MedicationDispense or MedicationAdministration)
+  * entry only Reference(CZ_MedicationDispenseHdr or CZ_MedicationStatement or CZ_MedicationRequestHdr or CZ_Medication)  //or MedicationDispense or MedicationAdministration)
 
 
 * section contains sectionSignificantResults 0..1
@@ -636,7 +636,7 @@ $loinc#10160-0) // 	History of Medication use Narrative
     Hospital discharge medications defines the medications that the patient is intended to take\, or stop\, after discharge,
     $loinc#75311-1 )   //  Discharge medications Narrative OR 10183-2 "Hospital discharge medications Narrative" or 	Discharge medications Narrative
   * entry 1..
-  * entry only Reference  (CZ_MedicationStatement or CZ_MedicationRequestHdr or CZ_MedicationHdr) //(CZ_MedicationRequestHdr or MedicationDispense)
+  * entry only Reference  (CZ_MedicationStatement or CZ_MedicationRequestHdr or CZ_Medication) //(CZ_MedicationRequestHdr or MedicationDispense)
 
 // -------------------------------------
 // Discharge Instructions Section 0 … 1
