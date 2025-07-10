@@ -175,18 +175,6 @@ Description: "Birth (registration) number"
 * value = "7161264528"
 * use = #official
 
-//----------------------------------------------------------------------------------------
-Instance: Device-Pacemaker
-InstanceOf: CZ_MedicalDevice
-Usage: #example
-Description: "Heart pacemaker Medtronic W1DR01"
-* id = "Device-Pacemaker"
-* meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-medical-device"
-* manufacturer = "Medtronic"
-* modelNumber = "W1DR01"
-* type = $sct#14106009 "Kardiostimulátor"
-* patient = Reference(Patient/Mracena) "Pokusný pacient Mračena"
-
 //-----------------------------------------------------
 Instance: PractitionerRole1
 InstanceOf: CZ_PractitionerRoleCore
