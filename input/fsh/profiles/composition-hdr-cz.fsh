@@ -680,6 +680,17 @@ $loinc#10160-0) // 	History of Medication use Narrative
     $loinc#42348-3 )  // 	Advance directives
   * entry only Reference(CZ_ConsentHdr or DocumentReference) // ==> Add Profile
 
+* section contains sectionInfectiousContacts ..1
+* section[sectionInfectiousContacts]
+  * insert SectionComRules (
+    Infectious contacts,
+    Infectious contacts of the patient,
+     TemporaryHDRSystem#infection-contact ) // $sct#444071008"Exposure to organism (event\)"
+  * entry 0..*
+  * entry only Reference(CZ_ObservationInfectiousContactHdr)
+    * ^short = "Exposure to an infectious agent."
+    * ^definition = "Information about a suspected infectious agent or agents the person was exposed to."
+  * section ..0
 
 * section contains sectionTravelHx ..1
 * section[sectionTravelHx]

@@ -168,6 +168,22 @@ InstanceOf: CZ_CompositionHdr
   Pacient byl v dobrém stavu propuštěn do domácího ošetření dne 10. 3. 2025. Doporučena klidová režimová opatření, kontrola v chirurgické ambulanci za 7 dní.
   </div>""" // Added required text for cardinality
 * section[sectionHospitalCourse].text.status = #generated
+
+// Sekce cestovatelská anamnéza
+* section[sectionTravelHx].title = "Cestovatelská anamnéza"
+* section[sectionTravelHx].code = $loinc#10182-4 "History of travel"
+* section[sectionTravelHx].text.status = #generated
+* section[sectionTravelHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacient nedávno cestoval na Madagaskar.</p></div>"
+* section[sectionTravelHx].entry[0] = Reference(Observation-TravelHistory-Madagaskar)
+* section[sectionTravelHx].author[0] = Reference(Practitioner-Author) // Example reference to a travel history observation
+
+
+* section[sectionInfectiousContacts].title = "Infekční kontakty"
+//* section[sectionInfectiousContacts].code = TemporaryHDRSystem#infection-contact "History of contact with infectious disease"
+* section[sectionInfectiousContacts].text.status = #generated
+* section[sectionInfectiousContacts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacient byl v kontaktu s osobou nakaženou COVID-19.</p></div>"
+* section[sectionInfectiousContacts].entry[0] = Reference(Observation-InfectiousContact)
+
 //* section[sectionHospitalCourse].title = "Průběh hospitalizace - klinické shrnutí"
 // Sekce Alergie
 * section[sectionAllergies].title = "Alergie, intolerance a varování"
