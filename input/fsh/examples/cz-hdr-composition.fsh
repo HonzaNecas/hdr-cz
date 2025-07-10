@@ -117,11 +117,7 @@ InstanceOf: CZ_CompositionHdr
 * section[sectionHospitalCourse].text.status = #generated
 
 
-* section[9].title = "P\u0159\u00edlohy"
-* section[9].entry[0] = Reference(DischargeDocumenPDF)
-* section[9].entry[1] = Reference(DischargeDocumentHTML)
-* section[9].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
-* section[9].text.status = #generated*/
+*/
 
 //-----------------------------------------------------------------
 
@@ -389,6 +385,13 @@ InstanceOf: CZ_CompositionHdr
   </div>"""
 * section[sectionPlanOfCare].text.status = #generated
 * section[sectionPlanOfCare].entry[0] = Reference(CarePlan-Novak)
+
+* section[sectionAttachments].title = "Přílohy"
+* section[sectionAttachments].entry[0] = Reference(DischargeDocumenPDF)
+* section[sectionAttachments].entry[1] = Reference(DischargeDocumentHTML)
+* section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
+* section[sectionAttachments].text.status = #generated
+
 /*
 //Sekce Údaje o hospitalizaci
 * section[sectionEncounters].title = "Údaje o hospitalizaci"
