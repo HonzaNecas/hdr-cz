@@ -71,7 +71,7 @@ Description: "Example instance for BMI observation using the CZ_ObservationBMIHd
 
 * status = #final
 * code = $loinc#39156-5 "Body mass index (BMI)"
-* subject = Reference(Mracena2)
+* subject = Reference(Patient-Novak-Petr)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 22.5
 * valueQuantity.unit = "kg/m2"

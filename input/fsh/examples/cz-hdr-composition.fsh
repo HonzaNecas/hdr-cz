@@ -156,6 +156,7 @@ InstanceOf: CZ_CompositionHdr
 * section[sectionAdmissionEvaluation].entry[3] = Reference(ExampleHeight)
 * section[sectionAdmissionEvaluation].entry[4] = Reference(ExampleWeight) 
 * section[sectionAdmissionEvaluation].entry[5] = Reference(ExampleBloodPressure) // Corrected Reference to include the resource type
+* section[sectionAdmissionEvaluation].entry[6] = Reference(ExampleBMI) // Corrected Reference to include the resource type
 
 
 //Sekce Průběh hospitalizace - klinické shrnutí
