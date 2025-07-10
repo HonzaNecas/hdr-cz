@@ -142,6 +142,22 @@ InstanceOf: CZ_CompositionHdr
 * author[+] = Reference(CZ_OrganizationCore/Organization-1)         // document authored by practitioner role
 * subject = Reference(Patient-Novak-Petr)            // document subject is patient
 * encounter = Reference(HospitalEncounter-Novak-Petr)
+
+//doplň mi tu sekci Stav při přijetí
+* section[sectionAdmissionEvaluation].title = "Stav při přijetí"
+* section[sectionAdmissionEvaluation].code.coding[0].system = $loinc
+* section[sectionAdmissionEvaluation].code.coding[0].code = #67852-4 // Corrected code assignment
+* section[sectionAdmissionEvaluation].code.coding[0].display = "Admission status"
+* section[sectionAdmissionEvaluation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient byl přijat na chirurgické oddělení s bolestivou pravostrannou tříselnou kýlou, která byla nevratná, bez známek strangulace. Při příjmu byl pacient v dobrém stavu, vitální funkce stabilní. Při fyzikálním vyšetření bylo zjištěno bolestivé zduření v oblasti pravého tříselného kanálu, bez známek zánětu nebo infekce. Laboratorní vyšetření ukázalo normální hodnoty krevního obrazu a biochemie, včetně TSH v normálním rozmezí. Pacient byl stabilní, bez známek dehydratace nebo hypovolemie. Byla zahájena předoperační příprava včetně interního vyšetření a laboratorních testů. Pacient byl informován o nutnosti chirurgického zákroku a souhlasil s ním. </div>" // Added required text for cardinality
+* section[sectionAdmissionEvaluation].text.status = #generated
+* section[sectionAdmissionEvaluation].entry[0] = Reference(ExampleChestCircumference)
+* section[sectionAdmissionEvaluation].entry[1] = Reference(ExampleHeadCircumference)
+* section[sectionAdmissionEvaluation].entry[2] = Reference(ExampleAbdominalCircumference)
+* section[sectionAdmissionEvaluation].entry[3] = Reference(ExampleHeight)
+* section[sectionAdmissionEvaluation].entry[4] = Reference(ExampleWeight) 
+* section[sectionAdmissionEvaluation].entry[5] = Reference(ExampleBloodPressure) // Corrected Reference to include the resource type
+
+
 //Sekce Průběh hospitalizace - klinické shrnutí
 * section[sectionHospitalCourse].title = "Klinické shrnutí"
 * section[sectionHospitalCourse].code = $loinc#8648-8 "Průběh hospitalizace"

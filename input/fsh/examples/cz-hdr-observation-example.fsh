@@ -47,7 +47,7 @@ Description: "Example instance for chest circumference observation using the CZ_
 
 * status = #final
 * code = $loinc#8280-0 "Chest circumference"
-* subject = Reference(Mracena2)
+* subject = Reference(Patient-Novak-Petr)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 85
 * valueQuantity.unit = "cm"
@@ -59,7 +59,7 @@ Description: "Example instance for head circumference observation using the CZ_O
 
 * status = #final
 * code = $loinc#8287-5 "Head circumference"
-* subject = Reference(Mracena2)
+* subject = Reference(Patient-Novak-Petr)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 50
 * valueQuantity.unit = "cm"
@@ -83,7 +83,7 @@ Description: "Example instance for abdominal circumference observation using the
 
 * status = #final
 * code = $loinc#56086-2 "Abdominal circumference"
-* subject = Reference(Mracena2)
+* subject = Reference(Patient-Novak-Petr)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 90
 * valueQuantity.unit = "cm"
@@ -95,7 +95,7 @@ Description: "Example instance for height observation using the CZ_ObservationHe
 
 * status = #final
 * code = $loinc#8302-2 "Body height"
-* subject = Reference(Mracena2)
+* subject = Reference(Patient-Novak-Petr)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 175
 * valueQuantity.unit = "cm"
@@ -107,7 +107,7 @@ Description: "Example instance for weight observation using the CZ_ObservationWe
 
 * status = #final
 * code = $loinc#29463-7 "Body weight"
-* subject = Reference(Mracena2)
+* subject = Reference(Patient-Novak-Petr)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 70
 * valueQuantity.unit = "kg"
@@ -156,3 +156,25 @@ Description: "Czech HDR - example of CRP observation for Novák Petr"
 * referenceRange[0].text = "Norma: 0–10 mg/L"
 * interpretation[+] = $v3-ObservationInterpretation#N "Normal"
 
+Instance: ExampleBloodPressure
+InstanceOf: Observation
+Description: "Example instance for blood pressure observation (systolic and diastolic)."
+* status = #final
+* category[0] = $observation-category#vital-signs "Vital Signs"
+* code = $loinc#85354-9 "Blood pressure panel with all children optional"
+* subject = Reference(Patient-Novak-Petr)
+* effectiveDateTime = "2024-03-28"
+
+// Systolický tlak
+* component[0].code = $loinc#8480-6 "Systolic blood pressure"
+* component[0].valueQuantity.value = 120
+* component[0].valueQuantity.unit = "mmHg"
+* component[0].valueQuantity.system = "http://unitsofmeasure.org"
+* component[0].valueQuantity.code = #mm[Hg]
+
+// Diastolický tlak
+* component[1].code = $loinc#8462-4 "Diastolic blood pressure"
+* component[1].valueQuantity.value = 80
+* component[1].valueQuantity.unit = "mmHg"
+* component[1].valueQuantity.system = "http://unitsofmeasure.org"
+* component[1].valueQuantity.code = #mm[Hg]
