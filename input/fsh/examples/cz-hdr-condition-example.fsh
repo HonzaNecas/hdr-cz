@@ -13,11 +13,7 @@ Description: "Czech HDR - example of a condition (Heart Failure)"
 * code = $icd10#I50 "Heart failure"
 * subject = Reference(Patient-Novak-Petr) 
 * onsetDateTime = "2025-01-01T08:00:00+01:00"
-* note.text = "Patient diagnosed with heart failure during hospital stay."
-
-
-// Condition note
-* note[0].text = "Patient diagnosed with heart failure during hospital stay."
+* note.text = "Pacient byl přijat s diagnózou srdečního selhání. Byla zahájena léčba diuretiky a ACE inhibitory."
 
 Instance: CZ-Condition-HDR-Example-2
 InstanceOf: CZ_ConditionHdr
