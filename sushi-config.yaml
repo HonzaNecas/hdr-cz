@@ -162,8 +162,6 @@ pages:
   # === MAP ====
   HospitalDischargeReport-map.html:
     title: HospitalDischargeReport Relationships
-  Header-map-cs.html:
-    title: Mapování logického modelu hlavičky Relationships
   Header-map.html:
     title: Header Relationships
   Subject-map.html:
